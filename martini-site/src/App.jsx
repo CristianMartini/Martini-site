@@ -1,23 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About'; 
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import AboutEducationExperience from './components/AboutEducationExperience';
+
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-      <h1>Cristian martini</h1>
-      <div className="card">
+    <div className="bg-white dark:bg-gray-900 transition-colors duration-300">
+      <Header />
+      <main className="mt-16">
+        <Hero />
+        <Skills />
        
-      </div>
-      <p className="read-the-docs">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis possimus atque aperiam inventore excepturi exercitationem eos nisi mollitia beatae maiores deserunt maxime expedita ducimus unde, temporibus, nobis et quas.
-      </p>
-    </>
-  )
+        <Projects />
+        <About />
+        <AboutEducationExperience /> {/* Renderização do novo componente */}
+        
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
