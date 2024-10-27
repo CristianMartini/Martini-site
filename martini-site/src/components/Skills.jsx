@@ -3,35 +3,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaNodeJs,
-  FaPhp,
-  FaJava,
-  FaGitAlt,
-  FaServer,
-  FaLightbulb,
-  FaUserFriends,
-  FaAdjust,
-  FaHandshake,
-  FaChalkboardTeacher,
-  FaClock,
+  FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaJava, FaGitAlt, FaServer,
+  FaLightbulb, FaUserFriends, FaAdjust, FaHandshake, FaChalkboardTeacher, FaClock,
 } from 'react-icons/fa';
 import {
-  SiTailwindcss,
-  SiKotlin,
-  SiNextdotjs,
-  SiAngular,
-  SiLaravel,
-  SiMysql,
-  SiMongodb,
-  SiBootstrap,
-  SiVisualstudiocode,
-  SiAndroidstudio,
-  SiGithub,
-  SiDocker,
+  SiTailwindcss, SiKotlin, SiNextdotjs, SiAngular, SiLaravel, SiMysql, SiMongodb,
+  SiBootstrap, SiVisualstudiocode, SiAndroidstudio, SiGithub, SiDocker,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -53,7 +30,7 @@ const Skills = () => {
     { name: 'VS Code', icon: <SiVisualstudiocode size={30} color="#007ACC" /> },
     { name: 'Android Studio', icon: <SiAndroidstudio size={30} color="#3DDC84" /> },
     { name: 'Docker', icon: <SiDocker size={30} color="#2496ED" /> },
-    { name: 'APIs RESTful', icon: <FaServer size={30} color="#6DB33F" /> }, // Correção aqui
+    { name: 'APIs RESTful', icon: <FaServer size={30} color="#6DB33F" /> },
     { name: 'MySQL', icon: <SiMysql size={30} color="#4479A1" /> },
     { name: 'MongoDB', icon: <SiMongodb size={30} color="#47A248" /> },
   ];
@@ -68,38 +45,41 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills"  className="py-20 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-4">
+    <section
+      id="skills"
+      className="py-20 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+    >
+      <div className="container mx-auto px-6 md:px-12">
         {/* Título da Seção */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-6 text-white dark:text-gray-100"
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-white dark:text-gray-100"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
           Habilidades
         </motion.h2>
 
         {/* Breve Descrição */}
         <motion.p
-          className="text-center text-gray-200 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+          className="text-center text-gray-200 dark:text-gray-300 mb-10 md:mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
           Essas são as principais tecnologias e competências que utilizo para desenvolver soluções eficientes e inovadoras.
         </motion.p>
 
         {/* Habilidades Técnicas */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold mb-4 text-center text-white dark:text-gray-200">
+        <div className="mb-14">
+          <h3 className="text-2xl font-semibold mb-6 text-center text-white dark:text-gray-200">
             Habilidades Técnicas
           </h3>
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
             {technicalSkills.map((skill, index) => (
               <motion.div
@@ -107,7 +87,7 @@ const Skills = () => {
                 className="flex flex-col items-center transition-transform transform hover:scale-105"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
+                transition={{ delay: index * 0.04, duration: 0.4 }}
               >
                 <div className="mb-2" aria-label={skill.name} title={skill.name}>
                   {skill.icon}
@@ -122,14 +102,14 @@ const Skills = () => {
 
         {/* Habilidades Comportamentais */}
         <div>
-          <h3 className="text-2xl font-semibold mb-4 text-center text-white dark:text-gray-200">
+          <h3 className="text-2xl font-semibold mb-6 text-center text-white dark:text-gray-200">
             Habilidades Comportamentais
           </h3>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
             {softSkills.map((skill, index) => (
               <motion.div
@@ -137,7 +117,7 @@ const Skills = () => {
                 className="flex items-center p-4 bg-white dark:bg-gray-700 rounded-lg shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05, duration: 0.5 }}
+                transition={{ delay: index * 0.04, duration: 0.4 }}
               >
                 <div className="text-blue-300 dark:text-blue-400 mr-3" aria-label={skill.name} title={skill.name}>
                   {skill.icon}

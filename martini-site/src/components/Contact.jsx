@@ -6,11 +6,14 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section
+      id="contact"
+      className="py-16 md:py-20 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+    >
       <div className="container mx-auto px-6 md:px-12">
         {/* Título da Seção */}
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-12 text-white dark:text-gray-100"
+          className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-white dark:text-gray-100"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -19,10 +22,10 @@ const Contact = () => {
           Contato
         </motion.h2>
         
-        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-start gap-12">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-start gap-8 md:gap-12">
           {/* Formulário de Contato */}
           <motion.form
-            className="w-full lg:w-1/2 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="w-full lg:w-1/2 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             action="mailto:cristianmartini.sp@gmail.com"
             method="post"
             encType="text/plain"

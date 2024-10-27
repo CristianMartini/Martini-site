@@ -33,26 +33,30 @@ const Header = () => {
     <header className="fixed w-full z-50 bg-blue-900 dark:bg-gray-900 text-white shadow-md top-0">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Nome do Site */}
-        <h1 className="text-2xl font-bold">Cristian Martini</h1>
+        <h1 className="text-2xl font-bold cursor-pointer">
+          <Link to="hero" smooth={true} duration={500}>
+            Cristian Martini
+          </Link>
+        </h1>
 
         {/* Menu de Navegação */}
         <nav className="hidden md:flex space-x-6">
-          
+
           <Link to="skills" smooth={true} duration={500} className="hover:text-blue-300 cursor-pointer">
             Habilidades
           </Link>
-           <Link to="projects" smooth={true} duration={500} className="hover:text-blue-300 cursor-pointer">
+          <Link to="projects" smooth={true} duration={500} className="hover:text-blue-300 cursor-pointer">
             Projetos
           </Link>
           <Link to="about" smooth={true} duration={500} className="hover:text-blue-300 cursor-pointer">
             Sobre Mim
           </Link>
-         
+
           <Link to="contact" smooth={true} duration={500} className="hover:text-blue-300 cursor-pointer">
             Contato
           </Link>
         </nav>
-        
+
 
         {/* Ícones do Lado Direito */}
         <div className="flex items-center space-x-4">

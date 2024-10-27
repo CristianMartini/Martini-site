@@ -17,20 +17,20 @@ const ProjectCard = ({ project }) => {
       <img
         src={project.image}
         alt={project.title}
-        className="w-full max-h-80 object-cover"
+        className="w-full h-48 sm:h-56 md:h-64 object-cover"
       />
 
       {/* Conteúdo do Projeto */}
       <div className="p-6">
-        <h3 className="text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+        <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
           {project.title}
         </h3>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
+        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-4">
           {project.description}
         </p>
         <div className="mb-4">
           <strong className="text-gray-800 dark:text-gray-200">Tecnologias Utilizadas:</strong>
-          <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-sm md:text-base">
             {project.technologies.map((tech, techIndex) => (
               <li key={techIndex}>{tech}</li>
             ))}
