@@ -13,12 +13,15 @@ const ProjectCard = ({ project }) => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      {/* Imagem do Projeto */}
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-48 sm:h-56 md:h-64 object-cover"
-      />
+      {/* Imagem do Projeto com proporção fixa */}
+      <div className="aspect-w-16 aspect-h-9">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
 
       {/* Conteúdo do Projeto */}
       <div className="p-6">
